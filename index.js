@@ -9,6 +9,7 @@ async function showPlayerInfo(tag) {
   try {
     const playerInfo = await client.playerByTag(tag)
     console.log("this is the player info:", playerInfo)
+    document.getElementById('main').innerHTML = playerInfo
 
   } catch (error) {
     console.error(error)
